@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family= Titillium +Web:wght@200 & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:wght@200;400;500&display=swap');
+
+:root{
+    --cor-preta:#161616;
+    --cor-preta-claro:rgba(43, 43, 43, 0.781);
+    --cor-azul:rgb(0, 110, 255);
+    --cor-hover-btn:rgb(5, 99, 221);
+    --cor-input:rgb(70, 70, 70);
+    --cor-placeholder:rgb(134, 134, 134);
+    --cor-box-shadow-form:rgba(0, 0, 0, 0.692);
+    --cor-branca:rgb(243, 243, 243);
+    --cor-branca2:rgb(211, 211, 211);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--cor-preta);
+}
+
+.section-conteudo{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-conteudo{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-conteudo h1{
+    color: var(--cor-azul);
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    font-size: 3vw;
+}
+
+.animate{
+    width: 30vw;
+}
+
+.right-conteudo{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.right-conteudo h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--cor-azul);
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    margin-bottom: 10px;
+}
+
+.form-complementos{
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    font-size: 14px;
+    border: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.form-complementos a{
+    text-decoration: none;
+    color: var(--cor-azul);
+    transition: .6s;
+}
+
+.form-complementos a:hover{
+    text-decoration: underline;
+    color: var(--cor-branca2);
+}
+
+.div-form{
+    background-color: var(--cor-preta-claro);
+    padding: 30px 35px;
+    border-radius: 20px;
+    width: 50%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 0px 40px var(--cor-box-shadow-form);
+}
+
+.div-form input{
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: var(--cor-input);
+    margin: 10px 0;
+    color: var(--cor-branca2);
+    width: 100%;
+}
+
+.div-form input::placeholder{
+    color: var(--cor-placeholder)
+}
+
+.div-form label{
+    color: white;
+    font-size: 18px;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+}
+
+.form-login{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.div-form .btn-login{
+    margin-top: 20px;
+    background-color: var(--cor-azul);
+    width: 100%;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 3px;
+    cursor: pointer;
+    box-shadow: 0 10px 40px -12px var(--cor-azul);
+    transition: .2s;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    font-size: 1em;
+}
+
+.btn-login:hover{
+    background: var(--cor-hover-btn);
+}
+
+.direitos-autoraias{
+    color: var(--cor-branca);
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+.direitos-autoraias a{
+    color: var(--cor-branca);
+    text-decoration: none;
+    transition: .6s all;
+}
+
+.direitos-autoraias a:hover{
+    color: var(--cor-azul);
+    text-decoration: underline;
+}
+
+
+/*Responsividade*/
+
+@media only screen and (max-width:950px) {
+    .div-form{
+        width: 70%;
+    }
+
+    .animate{
+        width: 40vw;
+    }
+
+  
+}
+
+@media only screen and (max-width:700px) {
+    .div-form{
+        width: 80%;
+        height: 40%;
+    }
+
+    .animate{
+        width: 40vw;
+    }
+
+    .form-complementos{
+        display: flex;
+        flex-direction: column; 
+        font-size: 14px;
+    }
+
+}
+
+@media only screen and (max-width:600px) {
+    .div-form{
+        width: 70vw;
+        height: 80%;
+        margin-top: -55%; 
+    }
+
+    .animate{
+        width: 40vw;
+    }
+
+    .left-conteudo h1{
+        display: none;
+    }
+
+    .section-conteudo{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .direitos-autoraias{
+        width: 100vw;
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width:480px) {
+    .div-form{
+        width: 70vw;
+        height: 80%;
+        margin-top: -70%; 
+    }
+
+    .animate{
+        width: 40vw;
+    }
+}
